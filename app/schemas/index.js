@@ -12,15 +12,12 @@ const connect = () => {
       {
          dbName: "nodejs",
          useNewUrlParser: true,
-      },
-      (errer) => {
-         if (errer) {
-            console.logg("몽고디비 연결 에러", errer);
-         } else {
-            console.log("몽고디비 연결 성공");
-         }
       }
-   );
+   ).then((res) => {
+    console.log('몽고디비 연결 성공');
+  }).catch((err) => {
+    console.log('몽고디비 연결 에러', error);
+  });
 };
 
 // 몽구스 커넥션에 이벤트 리스너를 달아준 것 에러발생 시 에러 내용 기록, 연결 종료 시 재연결 시도
