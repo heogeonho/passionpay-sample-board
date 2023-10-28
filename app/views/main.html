@@ -4,12 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="/css/main.css" rel="stylesheet" type="text/css" />
+        <script src="/js/main.js"></script>
         <title>Document</title>
     </head>
     <body>
         <div class="header">
             <p>{{ name }}님 안녕하세요</p>
-            <button class="create-button">글 생성하기</button>
+            <button
+                class="create-page-button"
+                id="create-page-button"
+                onclick="location.href='create'"
+            >
+                글 생성하기
+            </button>
         </div>
         <ul id="list">
             <div id="elem_box">
@@ -27,8 +34,8 @@
                 </div>
                 <div id="act_box">
                     <div>
-                        <button type="button">상세</button>
-                        <button type="button">작성</button>
+                        <button type="button" id="update-page">수정</button>
+                        <button type="button" id="delete-button">삭제</button>
                     </div>
                 </div>
             </div>
@@ -40,8 +47,8 @@
                 </div>
                 <div id="act_box">
                     <div>
-                        <button type="button">상세</button>
-                        <button type="button">작성</button>
+                        <button type="button" id="update-page">수정</button>
+                        <button type="button" id="delete-button">삭제</button>
                     </div>
                 </div>
             </div>

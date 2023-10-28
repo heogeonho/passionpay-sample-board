@@ -15,7 +15,7 @@ body {
     margin-bottom: 10px;
 }
 
-.create-button {
+.create-page-button {
     background-color: #9dc08b;
     color: #152117;
     border: none;
@@ -24,7 +24,7 @@ body {
     cursor: pointer;
 }
 
-.create-button:hover {
+.create-page-button:hover {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 

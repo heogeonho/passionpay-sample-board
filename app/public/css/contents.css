@@ -47,6 +47,7 @@ textarea {
 }
 
 .submit-button,
+.update-button,
 .cancel-button {
     padding: 10px 20px;
     border: none;
@@ -56,12 +57,14 @@ textarea {
     margin-left: 10px;
 }
 
-.submit-button {
+.submit-button,
+.update-button {
     background-color: #3c6255;
     color: #f7ffe5;
 }
 
-.submit-button:hover {
+.submit-button:hover,
+.update-button:hover {
     background-color: #eae7b1;
     color: #3a4d39;
 }
