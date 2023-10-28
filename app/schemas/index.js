@@ -8,7 +8,7 @@ const connect = () => {
 
     // 몽구스와 몽고디비를 연결하는 코드
     mongoose
-        .connect('mongodb://geonho:8609@localhost:27017/admin', {
+        .connect('mongodb://geon:1234@localhost:27017/admin', {
             dbName: 'nodejs',
             useNewUrlParser: true,
         })
