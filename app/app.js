@@ -9,9 +9,9 @@ const dotenv = require('dotenv');
 
 const connect = require('./schemas');
 const pageRouter = require('./routes/page');
+const authRouter = require('./routes/auth');
 const passportConfig = require('./passport');
-//const usersRouter = require('./routes/users');
-//const commentsRouter = require('./routes/comments');
+
 
 dotenv.config();
 const app = express();
@@ -42,8 +42,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', pageRouter);
-//app.use('/users', usersRouter);
-//app.use('/comments', commentsRouter);
+app.use('auth/', authRouter);
 
 app.use((req, res, next) => {
     const error = new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
