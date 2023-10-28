@@ -2,13 +2,18 @@ const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const nunjucks = require('nunjucks');
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 const connect = require('./schemas');
 const pageRouter = require('./routes/page');
+const passportConfig = require('./passport');
 //const usersRouter = require('./routes/users');
 //const commentsRouter = require('./routes/comments');
 
 const app = express();
+passportConfig(); // 패스포트 설정
 app.set('port', process.env.PORT || 3002);
 app.set('view engine', 'html');
 nunjucks.configure('views', {
@@ -21,6 +26,9 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', pageRouter);
 //app.use('/users', usersRouter);
