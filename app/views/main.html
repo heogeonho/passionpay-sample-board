@@ -3,9 +3,49 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/css/main.css" rel="stylesheet" type="text/css" />
         <title>Document</title>
     </head>
     <body>
-        <h1>main 게시판</h1>
+        <div class="header">
+            <p>{{ name }}님 안녕하세요</p>
+            <button class="create-button">글 생성하기</button>
+        </div>
+        <ul id="list">
+            <div id="elem_box">
+                <div>
+                    <div id="title_box">샘플 제목</div>
+                    <div id="contents_box">
+                        샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플
+                        내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플
+                        내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플
+                        내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플
+                        내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플
+                        내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플
+                        내용입니다. 샘플 내용입니다.
+                    </div>
+                </div>
+                <div id="act_box">
+                    <div>
+                        <button type="button">상세</button>
+                        <button type="button">작성</button>
+                    </div>
+                </div>
+            </div>
+            {% for post in posts %}
+            <div id="elem_box">
+                <div>
+                    <div id="title_box">{{ post.title }}</div>
+                    <div id="contents_box">{{ post.contents }}</div>
+                </div>
+                <div id="act_box">
+                    <div>
+                        <button type="button">상세</button>
+                        <button type="button">작성</button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </ul>
     </body>
 </html>
