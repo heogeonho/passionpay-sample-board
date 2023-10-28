@@ -3,9 +3,27 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/css/contents.css" rel="stylesheet" type="text/css" />
         <title>Document</title>
     </head>
     <body>
-        <h1>수정 페이지</h1>
+        <body>
+            <div class="container">
+                <h1>글 작성하기</h1>
+                <div class="input-container">
+                    <label for="title">제목</label>
+                    <input type="text" id="title" class="input-field" placeholder="제목을 입력하세요">
+                </div>
+                <div class="input-container">
+                    <label for="content">내용</label>
+                    <textarea id="content" class="input-field" placeholder="내용을 입력하세요"></textarea>
+                </div>
+                <div class="button-container">
+                    <button class="submit-button">수정 완료</button>
+                    <button class="cancel-button">취소</button>
+                </div>
+            </div>
+        </body>
     </body>
 </html>
+

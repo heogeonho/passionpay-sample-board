@@ -1,20 +1,23 @@
 body {
     margin: 0;
+    background-color: #eae7b1;
 }
 
 .header {
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
-    background-color: #edf1d6;
-    color: #40513b;
+    background-color: #263a29;
+    color: #ffffff;
     padding: 10px;
+    padding-left: 30px;
     margin-bottom: 10px;
 }
 
 .create-button {
     background-color: #9dc08b;
-    color: #40513b;
+    color: #152117;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -37,7 +40,7 @@ ul li {
 }
 #list {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    border: #ffffff solid;
+    background-color: #ffffff;
     height: auto;
     min-height: 300px;
     min-width: 700px;
