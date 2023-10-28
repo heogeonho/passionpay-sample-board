@@ -1,18 +1,18 @@
 const output = {
    login: (req, res) => {
-      res.render("index");
+      res.render('index');
    },
 
    main: (req, res) => {
-      res.render("main");
+      res.render('main');
    },
 
    create: (req, res) => {
-      res.render("create");
+      res.render('create');
    },
 
    update: (req, res) => {
-      res.render("update");
+      res.render('update');
    },
 };
 
