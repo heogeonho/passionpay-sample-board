@@ -1,0 +1,51 @@
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    background: #495e57;
+    padding: 0;
+    margin: 0;
+}
+
+.login-box {
+    background: #f5f7f8;
+    padding: 20px;
+    max-width: 480px;
+    margin: 30% auto;
+    text-align: center;
+    letter-spacing: 1px;
+    position: relative;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-box h2 {
+    margin: 20px 0 5px;
+    padding: 0;
+    text-transform: uppercase;
+    color: #495e57;
+}
+
+.login-box h5 {
+    margin: 5px 0 20px;
+    padding: 0;
+    color: #495e57;
+}
+
+.social-button {
+    background: url('../image/kakao_login_medium_wide.png') no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    height: 45px;
+    width: 300px;
+    border-radius: 5px;
+    margin: 10px auto;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: all 0.3s ease;
+}
+
+#kakao-connect:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}

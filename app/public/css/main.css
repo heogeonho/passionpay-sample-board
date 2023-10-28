@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    background-color: #eae7b1;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #263a29;
+    color: #ffffff;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.create-page-button {
+    background-color: #9dc08b;
+    color: #152117;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-page-button:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+ul {
+    padding: 0px;
+    overflow: auto;
+    margin: 5px;
+}
+ul li {
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+}
+#list {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background-color: #ffffff;
+    height: auto;
+    min-height: 300px;
+    min-width: 700px;
+    margin-top: 0px;
+}
+#list li {
+    display: block;
+    margin: 0px;
+}
+#elem_box {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+#title_box {
+    height: 50px;
+    width: 90%;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    word-break: break-all;
+    margin-left: 10px;
+    color: #40513b;
+    font-weight: 600;
+    font-size: larger;
+}
+
+#contents_box {
+    width: 90%;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    word-break: break-all;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    color: #40513b;
+}
+
+#act_box {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    justify-content: end;
+}
+#act_box div {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+#act_box div span {
+    font-size: smaller;
+    color: gray;
+    margin-right: 5px;
+}
+#act_box div button {
+    background-color: #9dc08b;
+    color: #40513b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#act_box div button:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
