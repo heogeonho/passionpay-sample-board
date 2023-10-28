@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const ctrl = require('../controllers/page');
 
 // 컨트롤러에 정의한 page render를 가져오는 과정
