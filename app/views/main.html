@@ -4,12 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="/css/main.css" rel="stylesheet" type="text/css" />
-        <script src="/js/main.js"></script>
         <title>Document</title>
     </head>
     <body>
         <div class="header">
-            <p>{{ user + '님 안녕하세요!' }}</p>
+            <p>{{ user.nick + '님 안녕하세요!' }}</p>
             <button
                 class="create-page-button"
                 id="create-page-button"
@@ -20,7 +19,7 @@
         </div>
         <ul class="list">
             {% for post in user.board %}
-            <div class="elem_box" id="{{ post.post_id }}">
+            <div class="elem_box" id="{{ post._id.toString() }}">
                 <div>
                     <div class="title_box">{{ post.title }}</div>
                     <div class="contents_box">{{ post.content }}</div>
@@ -30,14 +29,14 @@
                         <button
                             type="button"
                             class="update-button"
-                            data-post-id="{{ post.post_id }}"
+                            data-post-id="{{post._id.toString() }}"
                         >
                             수정
                         </button>
                         <button
                             type="button"
                             class="delete-button"
-                            data-post-id="{{ post.post_id }}"
+                            data-post-id="{{ post._id.toString() }}"
                         >
                             삭제
                         </button>
@@ -47,4 +46,5 @@
             {% endfor %}
         </ul>
     </body>
+    <script src="/js/main.js"></script>
 </html>
