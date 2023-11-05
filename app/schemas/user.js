@@ -4,7 +4,6 @@ const { Schema } = mongoose;
 
 // 게시글 스키마
 const postSchema = new Schema({
-    postId: String,
     title: String,
     content: String,
 });
