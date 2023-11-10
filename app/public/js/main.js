@@ -1,0 +1,24 @@
+const deleteButtons = document.querySelectorAll('.delete-button');
+
+deleteButtons.forEach((button) => {
+    const postId = button.getAttribute('data-post-id');
+    button.addEventListener('click', () => deletePost(postId));
+});
+
+function deletePost(postId) {
+    fetch(`/board/delete-post/${postId}`, {
+        method: 'DELETE',
+    })
+        .then((res) => res.json())
+        .then((res) => {
+            if (res.success) {
+                alert(res.message);
+                location.href = 'main';
+            } else {
+                alert(res.message);
+            }
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+}
