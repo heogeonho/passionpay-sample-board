@@ -11,7 +11,7 @@ exports.createPost = async (req, res) => {
             const id = req.user.id;
             const user = await User.findById({ _id: id }).exec();
             if (user) {
-                user.board.push(newPost);
+                user.board.push({$each: [newPost], $position: 0 });
                 await user.save();
                 res.json({ success: true, message: '게시물이 성공적으로 저장되었습니다!' });
             }
