@@ -31,5 +31,5 @@ updateButton.forEach((button) => {
 });
 
 function updatePostPage(postId) {
-    window.location.href = `/update/?${postId}`;
+    window.location.href = `/update/?postId=${postId}`;
 }
