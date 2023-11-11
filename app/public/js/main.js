@@ -22,3 +22,14 @@ function deletePost(postId) {
             console.error(error);
         });
 }
+
+const updateButton = document.querySelectorAll('.update-button');
+
+updateButton.forEach((button) => {
+    const postId = button.getAttribute('data-post-id');
+    button.addEventListener('click', () => updatePostPage(postId));
+});
+
+function updatePostPage(postID) {
+    window.location.href = `/update/?${postID}`;
+}
