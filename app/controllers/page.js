@@ -1,3 +1,5 @@
+const User = require('../schemas/user');
+
 const output = {
     login: (req, res) => {
         res.render('index');
@@ -11,8 +13,16 @@ const output = {
         res.render('create');
     },
 
-    update: (req, res) => {
-        res.render('update');
+    update: async (req, res, next, postId) => {
+        try {
+            const userId = req.user.id;
+            const user = await User.findById({ _id: userId }).exec();
+            const post = user.board.id(postId);
+            console.log(post);
+            res.render('update', { post });
+        } catch (err) {
+            next(err);
+        }
     },
 };
 
