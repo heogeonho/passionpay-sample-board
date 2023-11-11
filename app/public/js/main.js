@@ -30,6 +30,6 @@ updateButton.forEach((button) => {
     button.addEventListener('click', () => updatePostPage(postId));
 });
 
-function updatePostPage(postID) {
-    window.location.href = `/update/?${postID}`;
+function updatePostPage(postId) {
+    window.location.href = `/update/?${postId}`;
 }
