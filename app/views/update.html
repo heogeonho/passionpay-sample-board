@@ -17,15 +17,14 @@
                         id="title"
                         class="input-field"
                         placeholder="제목을 입력하세요"
+                        value="{{ post.title }}"
                     />
                 </div>
                 <div class="input-container">
                     <label for="content">내용</label>
-                    <textarea
-                        id="content"
-                        class="input-field"
-                        placeholder="내용을 입력하세요"
-                    ></textarea>
+                    <textarea id="content" class="input-field" placeholder="내용을 입력하세요">
+{{ post.content }}</textarea
+                    >
                 </div>
                 <div class="button-container">
                     <button class="update-button" id="update-button">수정하기</button>
