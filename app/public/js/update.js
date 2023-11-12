@@ -1,8 +1,11 @@
-const createButton = document.getElementById('create-button');
+const updateButton = document.getElementById('update-button');
 
-createButton.addEventListener('click', createPost);
+updateButton.addEventListener('click', updatePost);
 
-function createPost() {
+function updatePost() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const postId = urlParams.get('postId');
+
     // 제목과 내용을 가져오기
     const title = document.getElementById('title').value;
     const content = document.getElementById('content').value;
@@ -13,8 +16,8 @@ function createPost() {
         content: content,
     };
 
-    fetch('/board', {
-        method: 'POST',
+    fetch(`/board/update-post/?postId=${postId}`, {
+        method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
         },
@@ -29,5 +32,5 @@ function createPost() {
                 alert(res.message);
             }
         })
-        .catch((err) => console.error('에러 발생' + err));
+        .catch((err) => console.error(error));
 }
