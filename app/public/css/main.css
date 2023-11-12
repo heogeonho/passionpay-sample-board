@@ -38,7 +38,7 @@ ul li {
     margin: 10px;
     padding: 5px;
 }
-#list {
+.list {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     background-color: #ffffff;
     height: auto;
@@ -46,17 +46,17 @@ ul li {
     min-width: 700px;
     margin-top: 0px;
 }
-#list li {
+.list li {
     display: block;
     margin: 0px;
 }
-#elem_box {
+.elem_box {
     min-height: 70px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid lightgray;
 }
-#title_box {
+.title_box {
     height: 50px;
     width: 90%;
     min-width: 300px;
@@ -70,7 +70,7 @@ ul li {
     font-size: larger;
 }
 
-#contents_box {
+.contents_box {
     width: 90%;
     min-width: 300px;
     display: flex;
@@ -82,23 +82,23 @@ ul li {
     color: #40513b;
 }
 
-#act_box {
+.act_box {
     display: flex;
     flex-direction: column;
     min-width: 150px;
     justify-content: end;
 }
-#act_box div {
+.act_box div {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 5px;
 }
-#act_box div span {
+.act_box div span {
     font-size: smaller;
     color: gray;
     margin-right: 5px;
 }
-#act_box div button {
+.act_box div button {
     background-color: #9dc08b;
     color: #40513b;
     border: none;
@@ -108,6 +108,6 @@ ul li {
     margin-right: 5px;
 }
 
-#act_box div button:hover {
+.act_box div button:hover {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }

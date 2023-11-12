@@ -4,13 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="/css/contents.css" rel="stylesheet" type="text/css" />
-        <script src="/js/main.js"></script>
         <title>Document</title>
     </head>
     <body>
         <body>
             <div class="container">
-                <h1>글 작성하기</h1>
+                <h1>글 수정하기</h1>
                 <div class="input-container">
                     <label for="title">제목</label>
                     <input
@@ -18,23 +17,27 @@
                         id="title"
                         class="input-field"
                         placeholder="제목을 입력하세요"
+                        value="{{ post.title }}"
                     />
                 </div>
                 <div class="input-container">
                     <label for="content">내용</label>
-                    <textarea
-                        id="content"
-                        class="input-field"
-                        placeholder="내용을 입력하세요"
-                    ></textarea>
+                    <textarea id="content" class="input-field" placeholder="내용을 입력하세요">
+{{ post.content }}</textarea
+                    >
                 </div>
                 <div class="button-container">
                     <button class="update-button" id="update-button">수정하기</button>
-                    <button class="cancel-button" id="cancel-button" onclick="location.href='main'">
+                    <button
+                        class="cancel-button"
+                        id="cancel-button"
+                        onclick="location.href='/main'"
+                    >
                         취소
                     </button>
                 </div>
             </div>
+            <script src="/js/update.js"></script>
         </body>
     </body>
 </html>

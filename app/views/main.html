@@ -4,7 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="/css/main.css" rel="stylesheet" type="text/css" />
-        <script src="/js/main.js"></script>
         <title>Document</title>
     </head>
     <body>
@@ -18,41 +17,34 @@
                 글 생성하기
             </button>
         </div>
-        <ul id="list">
-            <div id="elem_box">
+        <ul class="list">
+            {% for post in user.board %}
+            <div class="elem_box" id="{{ post._id.toString() }}">
                 <div>
-                    <div id="title_box">샘플 제목</div>
-                    <div id="contents_box">
-                        샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플
-                        내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플
-                        내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플
-                        내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플
-                        내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플
-                        내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플 내용입니다. 샘플
-                        내용입니다. 샘플 내용입니다.
-                    </div>
+                    <div class="title_box">{{ post.title }}</div>
+                    <div class="contents_box">{{ post.content }}</div>
                 </div>
-                <div id="act_box">
+                <div class="act_box">
                     <div>
-                        <button type="button" id="update-page">수정</button>
-                        <button type="button" id="delete-button">삭제</button>
-                    </div>
-                </div>
-            </div>
-            {% for post in posts %}
-            <div id="elem_box">
-                <div>
-                    <div id="title_box">{{ post.title }}</div>
-                    <div id="contents_box">{{ post.contents }}</div>
-                </div>
-                <div id="act_box">
-                    <div>
-                        <button type="button" id="update-page">수정</button>
-                        <button type="button" id="delete-button">삭제</button>
+                        <button
+                            type="button"
+                            class="update-button"
+                            data-post-id="{{post._id.toString() }}"
+                        >
+                            수정
+                        </button>
+                        <button
+                            type="button"
+                            class="delete-button"
+                            data-post-id="{{ post._id.toString() }}"
+                        >
+                            삭제
+                        </button>
                     </div>
                 </div>
             </div>
             {% endfor %}
         </ul>
     </body>
+    <script src="/js/main.js"></script>
 </html>
