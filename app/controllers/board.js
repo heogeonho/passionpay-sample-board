@@ -38,3 +38,29 @@ exports.deletePost = async (req, res) => {
         console.error(err);
     }
 };
+
+exports.updatePost = async (req, res) => {
+    try {
+        const postId = req.query.postId;
+        const newData = req.body
+
+        const user = await User.findById({ _id: req.user.id }).exec();
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+    
+        const postToUpdate = user.board.id(postId);
+        if (!postToUpdate) {
+            return res.status(404).json({ message: 'Post not found' });
+        }
+    
+        postToUpdate.title = newData.title;
+        postToUpdate.content = newData.content;
+    
+        await user.save();
+        res.json({success: true, message:'수정이 완료되었습니다.'});
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ success: false, message: '게시물 수정 중 오류가 발생했습니다.' });
+    }   
+}
