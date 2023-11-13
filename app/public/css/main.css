@@ -45,6 +45,7 @@ ul li {
     min-height: 300px;
     min-width: 700px;
     margin-top: 0px;
+    border-radius: 8px;
 }
 .list li {
     display: block;
